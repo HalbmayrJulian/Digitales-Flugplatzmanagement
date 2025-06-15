@@ -404,3 +404,65 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+
+
+
+
+---
+ 
+### ✅ **.gitignore für Blazor Server mit EF Core / MariaDB**
+ 
+```gitignore
+
+# .NET
+
+bin/
+
+obj/
+
+*.user
+
+*.suo
+
+*.userosscache
+
+*.sln.docstates
+ 
+# Rider / VSCode / VS
+
+.idea/
+
+.vscode/
+
+*.log
+ 
+# User secrets
+
+secrets.json
+
+appsettings.Development.json
+ 
+ 
+# Database files (falls SQLite-Test oder andere lokale DBs)
+
+*.db
+
+*.mdf
+
+*.ldf
+ 
+# Logs & temp
+
+*.pid
+
+*.tmp
+
+*.bak
+ 
+# Publish
+
+publish/
+
+*.Publish.xml
+
+ 

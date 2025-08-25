@@ -1,4 +1,5 @@
 using Flugplatzmanager.Components;
+using MudBlazor.Services;
 
 namespace Flugplatzmanager
 {
@@ -13,6 +14,7 @@ namespace Flugplatzmanager
                 .AddInteractiveServerComponents();
 
             builder.Services.AddBlazorBootstrap();
+            builder.Services.AddMudServices();
 
             var app = builder.Build();
 

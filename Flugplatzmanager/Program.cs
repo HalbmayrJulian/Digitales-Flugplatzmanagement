@@ -13,7 +13,7 @@ namespace Flugplatzmanager
             builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
-            builder.Services.AddBlazorBootstrap();
+            
             builder.Services.AddMudServices();
 
             var app = builder.Build();

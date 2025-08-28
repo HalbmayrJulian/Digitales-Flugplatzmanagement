@@ -22,6 +22,7 @@
     </PackageReference>
     <PackageReference Include="MudBlazor" Version="8.11.0" />
     <PackageReference Include="MySqlConnector" Version="2.4.0" />
+    <PackageReference Include="PDFsharp" Version="6.2.1" />
     <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.3" />
   </ItemGroup>
 

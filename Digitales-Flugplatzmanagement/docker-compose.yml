@@ -1,0 +1,32 @@
+# https://www.youtube.com/watch?v=WQFx2m5Ub9M als Tutorial genutzt
+services:
+  flugplatzmanager:
+    image: ${DOCKER_REGISTRY-}flugplatzmanager
+    container_name: flugplatzmanager
+    build:
+      context: Flugplatzmanager
+      dockerfile: Dockerfile
+  flugplatzmanager.database:
+    image: postgres:latest
+    container_name: flugplatzmanager.database
+    environment:
+      - POSTGRES_DB=flugplatzmanager
+      - POSTGRES_USER=flugplatzmanager
+      - POSTGRES_PASSWORD=Dc#9EnhHj6WzhYt@@2079TwokG81mwNsa#
+      - POSTGRES_INITDB_ARGS=--auth-host=md5 --auth-local=md5
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+    ports:
+     - "5432:5432"
+    restart: unless-stopped
+  flugplatzmanager.cache:
+    image: redis:latest
+    container_name: flugplatzmanager.cache
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+
